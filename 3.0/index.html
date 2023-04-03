@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- CSS only -->
     <link href="../bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,45 +25,53 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/slideshow.css">  
     <link rel="stylesheet" href="css/forms.css"> 
-    <title>RubyStone Tech</title>
-    <link rel = "icon" href = "favicon.ico" type = "image/x-icon/ico">
+    <title>RubyStoneTECH</title>
+    <link rel = "icon" href = "./res/logo.png" type = "image/x-icon/ico">
 </head>
 <body><!--  --> 
 
     <!-- Sidebar-->
     <header>
-  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg">
-    <div class="position-sticky">
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse invisible-scrollbar">
+    <div class="">
       <div class="sidebar_a_container"> <!-- list-group list-group-flush mx-3 mt-4 -->
         <a href="#about" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
           <i class="fa-solid fa-house me-3"></i><span>Home</span>
         </a>
-        <a href="#submenu3" data-bs-toggle="collapse" data-bs-target="#submenu3" aria-controls="submenu3" aria-expanded="false" aria-label="Toggle navigation" class="list-group-item list-group-item-action py-2 ripple">
+        <a  id="servicesMenuLink" href="#submenu3" data-bs-toggle="collapse" data-bs-target="#submenu3" aria-controls="submenu3" aria-expanded="false" aria-label="Toggle navigation" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fa fa-wrench me-3" aria-hidden="true"></i><span class="">Services</span> </a>
            <ul class="collapse nav flex-column ms-1" id="submenu3" ><!-- data-bs-parent="#menu" -->
+                <li>
+                    <a href="#cctv" class="nav-link px-0">
+                        <span class="">       CCTV</span></a>
+                </li>
                 <li class="w-100">
-                    <a href="#smart_homes" class="">       
+                    <a href="#smart_homes" class="nav-link px-0">       
                         <span class="">Smart Homes</span></a>
                 </li>
-                <li>
-                    <a href="#auto_gates" class="nav-link px-0">
-                        <span class="">       Automated Gates</span></a>
-                </li>
-                <li>
-                    <a href="#e_fence" class="nav-link px-0">
-                        <span class="">       Electric Fence</span></a>
-                </li>
                 <li class="w-100">
-                    <a href="#access_control" class="nav-link px-0">
-                        <span class="">       Access Control</span></a>
+                    <a href="#f_d_s" class="nav-link px-0">
+                        <span class="">       Fire Detection Systems</span></a>
                 </li>
                 <li>
-                    <a href="#solar_panels_inverter" class="nav-link px-0">
-                        <span class="">       Solar Panels & Inverter</span></a>
+                    <a href="#a_c_s" class="nav-link px-0">
+                        <span class="">       Access control Systems</span></a>
                 </li>
                 <li>
-                    <a href="#intercom" class="nav-link px-0">
-                        <span class="">       Intercom</span></a>
+                    <a href="#b_a_s" class="nav-link px-0">
+                        <span class="">       Burglar Alarm Systems</span></a>
+                </li>
+                <li>
+                    <a href="#i_v_i_s" class="nav-link px-0">
+                        <span class="">       Intercom Systems</span></a>
+                </li>
+                <li>
+                    <a href="#o_p_i_d_s" class="nav-link px-0">
+                        <span class="">       Perimeter Intrusion Detection Systems</span></a>
+                </li>
+                <li>
+                    <a href="#r_e_s_p_m" class="nav-link px-0">
+                        <span class="">Renewale Energy Solution and Power Management</span></a>
                 </li>
             </ul> 
         <a href="#training" class="list-group-item list-group-item-action py-2 ripple">
@@ -76,7 +85,7 @@
   </nav> 
   <!-- Sidebar -->
    <!-- Navbar -->
-   <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+   <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top navbar-fixed-top">
     <!-- Container wrapper -->
     <div class="container-fluid">
       <!-- Toggle button -->
@@ -86,109 +95,15 @@
 
       <!-- Brand -->
      <a class="navbar-brand" href="#"> 
-        <!--<img   src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="25" alt="" loading="lazy" />-->
-        <h3>RubyStone</h3>
+        <!--<img   src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="25" alt="" loading="lazy" />
+        <h3>RUBYSTONETECH</h3>-->
+        <img   src="./res/logo.png" height="35" alt="" loading="lazy" />
       </a>    
       
     </div>
   </nav>
 
 </header>
-
-
-  <!-- <div class="container-fluid">
-    <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">Menu</span>
-                </a>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
-                    </li>
-                    <li>
-                        <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
-                        <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
-                    </li>
-                </ul>
-                <hr>
-                <div class="dropdown pb-4">
-                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                        <span class="d-none d-sm-inline mx-1">loser</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
-       <!--  <div class="col py-3">
-            <h3>Left Sidebar with Submenus</h3>
-            <p class="lead">
-                An example 2-level sidebar with collasible menu items. The menu functions like an "accordion" where only a single 
-                menu is be open at a time. While the sidebar itself is not toggle-able, it does responsively shrink in width on smaller screens.</p>
-            <ul class="list-unstyled">
-                <li><h5>Responsive</h5> shrinks in width, hides text labels and collapses to icons only on mobile</li>
-            </ul>
-        </div> 
-    </div>
-</div> -->
 
 
     <!--Main layout-->
@@ -201,10 +116,10 @@
             <div class="container banner">
                 <div class="row">
                     <div class="col-md-12">
-                    <h1 class='text-center m-auto align-items-center align-self-center align-middle'>RubyStone Tech</h1>
-                    <p class="text-justify">We design and incorporate solutions that cut across all levels of demand ranging from small 
-                        households to small business and large co-operations that involves elaborate network structures and planning.</p>
-                    <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Hire us</a>
+                    <h1 class='text-center m-auto align-items-center align-self-center align-middle'>RubyStoneTECH</h1>
+                    <p class="text-justify">At RubystoneTECH we provide Consultancy and Implementation services for Home Automation, Surveillance and Alternative power Solutions. We design and incorporate Solutions that cut across all levels of demand ranging from
+                        households to small, medium and large co-operations that involves elaborate network structures and planning. </p>
+                    <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Contact us</a>
                     <a href="#request_training" class="btn_default"><i class="fa-solid fa-user-graduate"></i>  Train with us</a>
                     </div>
                     
@@ -227,92 +142,132 @@
                                  appliance and all plugged in devices can be activated/deactivated remotely or a mid range package where
                                   only selected devices and application will be automated. 
                             </p>
-                            <a href="#request_service" class="btn_default">Hire us</a>
+                            <a href="#request_service" class="btn_default">Contact us</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id='auto_gates' class="fadeup">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center m-auto align-items-center align-self-center align-middle special-icons">
-                                <i class="fas fa-torii-gate fa-4x"></i>  
-                            </div>
-                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Automated Gates</h2>
-                            
-                            <p class="text-justify">We design and incorporate solutions that cut across all levels of demand ranging from small 
-                                households to small business and large co-operations that involves elaborate network structures and planning.</p>
-                                <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Hire us</a>
-                            </div>
-                    </div>
-                </div>
-            </section>
-            <section id='e_fence' class="fadeup">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center m-auto align-items-center align-self-center align-middle special-icons">
-                                  
-                            </div>
-                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Electric Fence</h2>
-                            
-                            <p class="text-justify">RubyStone Tech LTD installs reliable and advanced wirelesss and conventional technologies for the
-                                 security of homes and offices, integrating them, upon request, with electronic detection and automation
-                                  systems compatible with the solution.</p>
-                            <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Hire us</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id='access_control' class="fadeup">
+            <section id='cctv' class="fadeup">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="text-center m-auto align-items-center align-self-center align-middle special-icons">
                                  
                             </div>
-                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Access Control</h2>
+                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>CCTV</h2>
                             
-                            <p class="text-justify">Rubystone tech LTD installs elaborate security management that safeguards your property with state of the art tech which
-                                 combines security systems and information systems of an organization for optimum security. These systems may include video surveillance,
-                                  fire alarm and evacuation systems, intrusion alarm technology and access control systems.</p>
-                                <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Hire us</a>
+                            <p class="text-justify">RubystoneTECH LTD installs elaborate security management that safeguards your property with
+                                 state of the art tech combining security systems and informations systems for optimum performance. These systems
+                                  may include video surveillance, intrusion alarm technology. For enhanced security and intelligence gathering,
+                                   integrated security system involving CCTV, advanced security management software is highly recommended especially
+                                    for large co-operations. These systems can be remotely access via a desktop, pc or mobile phone.</p>
+                                <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Contact us</a>
                             </div>
                     </div>
                 </div>
             </section>
-            <section id='solar_panels_inverter' class="fadeup">
+            <section id='r_e_s_p_m' class="fadeup">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="text-center m-auto align-items-center align-self-center align-middle special-icons">
-                                <i class="fa-solid fa-solar-panel fa-4x"></i>  
+                                <i class="fa-solid fa-solar-panel fa-4x"></i>
                             </div>
-                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Solar Panels and Inverters</h2>
+                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Renewale energy solution and power management</h2>
                             
-                            <p class="text-justify">We design and incorporate solutions that cut across all levels of demand ranging from small 
-                                households to small business and large co-operations that involves elaborate network structures and planning.
-                            </p>
-                            <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Hire us</a>
+                            <p class="text-justify">Our services delivery on renewable energy includes installation and maintenance of solar panel, inverters, batteries.</p>
+                            <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Contact us</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id='intercom' class="fadeup">
+            <section id='f_d_s' class="fadeup">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center m-auto align-items-center align-self-center align-middle special-icons">
+                                 
+                            </div>
+                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Fire detection systems</h2>
+                            
+                            <p class="text-justify">We install fire alarm systems for homes and businesses using the most advanced and reliable technologies in the market.
+                                 These systems interface with other security detectors and automation systems of customers. Several designs options suitable for projects
+                                  with varying sizes, and compatible with both the operating senarios provided by the customer and the risk analysis carried out by our engineers.
+                            </p>
+                                <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Contact us</a>
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <section id='a_c_s' class="fadeup">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center m-auto align-items-center align-self-center align-middle special-icons">
+                                
+                            </div>
+                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Access control systems</h2>
+                            
+                            <p class="text-justify">We provide Access Control Systems which constitute an integral part of electronic security systems, with a range of products according to operating scenarios provided
+                                 by the customer and risk analysis carried out by our engineers for the fulfillment of multiple purposes. These are put into operation and delivered as a turnkey optimum equipment configuration.</p>
+                            <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id='b_a_s' class="fadeup">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center m-auto align-items-center align-self-center align-middle special-icons">
+                                 
+                            </div>
+                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Burglar alarm systems</h2>
+                            
+                            <p class="text-justify">RubystoneTECH LTD installs reliable and advanced wireless and conventional technologies for the security of homes and offices,
+                                 integrating them, with electronic detection and automation systems.
+                                 <br> RubystoneTECH LTD designs various projects intended to satisfy all sorts of requirements demanded by the customer.</p>
+                                <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Contact us</a>
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <section id='i_v_i_s' class="fadeup">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="text-center m-auto align-items-center align-self-center align-middle special-icons">
                                 <i class="fa-brands fa-intercom fa-4x"></i>  
                             </div>
-                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Intercoms</h2>
+                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Intercom systems</h2>
                             
-                            <p class="text-justify">RubyStone Tech LTD designs intercom systems with/without video for the entrance security of homes
-                                 and offers a wide range of products in the field from small home systems to large systems for
-                                  residential estates such as condominiums according to the operating scenario provided by the
-                                   customer and the risk analysis carried out by our engineers with an optimum equipment configuration.</p>
-                                <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Hire us</a>
+                            <p class="text-justify">RubystoneTECH LTD designs intercom systems with/without video for the entrances security of homes
+                                 and offices and offers a wide range of products in this field from small home systems to large systems for residential
+                                  estates such as condominiums .<br> They can be used as stand-alone or networked. The system
+                                       permits host-visitor communication or communication between occupants of the same building. 
+                                       In residential estates and condominiums, the system permits communication between the occupants
+                                         of apartments and the security staff and visitors.</p>
+                                <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Contact us</a>
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <section id='o_p_i_d_s' class="fadeup">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center m-auto align-items-center align-self-center align-middle special-icons">
+                                 
+                            </div>
+                            <h2 class='text-center m-auto align-items-center align-self-center align-middle'>Perimeter intrusion detection systems</h2>
+                            
+                            <p class="text-justify">We design outdoor Perimeter Intrusion Detection Systems for premises
+                                    which is most exposed to the outside (gardens, walls, fences etc), ensuring security all along
+                                     the line surrounding the premises. Our detection system are integrated with other electronic security
+                                      systems and ensures the monitoring and recording of potential threat. The cameras automatically turn towards
+                                       the hint of intrusion. Our system archives the images and other data and alarms for eventual
+                                        retrospective investigations separately for each operator.</p>
+                                <a href="#request_service" class="btn_default"><i class="fa-brands fa-hire-a-helper"></i>  Contact us</a>
                             </div>
                     </div>
                 </div>
@@ -355,12 +310,13 @@
 
                             <select name="service" id="lang" data-placeholder="Desired Service" class="input_custom">
                                 <option value="" disabled selected hidden class="input_placeholder">Desired Service</option>
-                                <option value="january" class="input_custom">Smart Homes</option>
-                                <option value="feburary" class="input_custom">Automated Gates</option>
-                                <option value="march">Electric Fence</option>
-                                <option value="april">Access Control</option>
-                                <option value="may">Solar Panels and Inverter</option>
-                                <option value="june">Intercom</option>
+                                <option value="Smart_Homes" class="input_custom">Smart Homes</option>
+                                <option value="CCTV" class="input_custom">CCTV</option>
+                                <option value="Fire_detection_systems">Fire detection systems</option>
+                                <option value="Burglar_alarm_systems">Burglar alarm systems</option>
+                                <option value="Intercom_&_Video_intercom_systems">Intercom systems</option>
+                                <option value="Outdoor_perimeter_intrusion_detection_systems">Perimeter intrusion detection systems</option>
+                                <option value="Renewale_energy_solution_and_power_management">Renewale energy solution and power management</option>
                             </select>
 
                             <input type="text" placeholder="Message" class="input_custom" name='message' rows='3'/>
@@ -421,13 +377,14 @@
                             
                             <select name="service" id="lang" data-placeholder="Desired Service" class="input_custom">
                                 <option value="" disabled selected hidden class="input_placeholder">Desired Service</option>
-                                <option value="january" class="input_custom">Smart Homes</option>
-                                <option value="feburary" class="input_custom">Automated Gates</option>
-                                <option value="march">Electric Fence</option>
-                                <option value="april">Access Control</option>
-                                <option value="may">Solar Panels and Inverter</option>
-                                <option value="june">Intercom</option>
-                              </select>
+                                <option value="CCTV" class="input_custom">CCTV</option>
+                                <option value="Smart_Homes" class="input_custom">Smart Homes</option>
+                                <option value="Fire_detection_systems">Fire detection systems</option>
+                                <option value="Burglar_alarm_systems">Burglar alarm systems</option>
+                                <option value="Intercom_&_Video_intercom_systems">Intercom systems</option>
+                                <option value="Outdoor_perimeter_intrusion_detection_systems">Perimeter intrusion detection systems</option>
+                                <option value="Renewale_energy_solution_and_power_management">Renewale energy solution and power management</option>
+                            </select>
                             <select name="month" id="lang" placeholder="Desired Service" class="input_custom">
                                 <option value="" disabled selected hidden>Desired Starting Month</option>
                                 <option value="january" class="input_custom">January</option>
@@ -503,32 +460,40 @@
                 <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <h6>About</h6>
-                    <p class="text-justify">RubyStoneTech LTD <i>TECH WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming societies in Nigeria. RubyStoneTech LTD focuses on providing the most efficient 
-                        and best Security Technologies to Homes and Offices.
+                    <p class="text-justify">RubyStoneTECH LTD is an initiative to help the upcoming societies in Nigeria.
                     </p>
                 </div>
+                
+        <div class="col-12 col-sm-12 col-md-6">                        
+            <div class="container">
+                <div class="row">
 
-                <div class="col-xs-6 col-md-3">
+                <div class="col-6 col-sm-6 col-md-6">
                     <h6>Categories</h6>
                     <ul class="footer-links">
-                    <li><a href="smart_homes">Smart Homes</a></li>
-                    <li><a href="auto_gates">Automated Gates</a></li>
-                    <li><a href="e_fence">Electric Fence</a></li>
-                    <li><a href="access_control">Access Control</a></li>
-                    <li><a href="solar_panels_inverter">Solar Panels and Inv</a></li>
+                        <li><a href="#cctv">CCTV</a></li>
+                        <li><a href="#smart_homes">Smart Homes</a></li>
+                        <li><a href="#f_d_s">Fire Detection</a></li>
+                        <li><a href="#a_c_s">Access control Systems</a></li>
+                        <li><a href="#r_e_s_p_m">Renewable Energy</a></li>  
                     </ul>
                 </div>
 
-                <div class="col-xs-6 col-md-3">
+                <div class="col-6 col-sm-6 col-md-6">
                     <h6>Quick Links</h6>
                     <ul class="footer-links">
-                    <li><a href="#banner">Home</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="">Contribute</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Sitemap</a></li>
+                        <li><a href="#banner">Home</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="">Contribute</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Sitemap</a></li>
                     </ul>
                 </div>
+
+                </div>
+            </div>
+        </div>
+
                 </div>
                 <hr>
             </div>
